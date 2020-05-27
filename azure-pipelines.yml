@@ -48,3 +48,4 @@ steps:
     git remote add origin https://<<<REPO_PASSWORD>>>@<<<REPO_URL>>>
     git push -u origin HEAD:master
   displayName: 'Push to Repo'
+  condition: or(eq(variables['BUILD_TYPE'], 'retrieve'),eq(variables['BUILD_TYPE'], 'both'))
